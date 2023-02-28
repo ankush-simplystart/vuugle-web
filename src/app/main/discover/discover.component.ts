@@ -22,7 +22,7 @@ export class DiscoverComponent implements OnInit {
   ngOnInit(): void {
   }
   /**
-   * Function to get content creators list
+   * Function to get content creators list..
    */
   async getContentCreatorsList(){
       let filter = {
