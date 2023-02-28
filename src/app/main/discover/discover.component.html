@@ -30,11 +30,22 @@
 
         <div class="items" *ngFor="let contentCreator of contentCreatorsList">
 
-          <div class="wishlisticonactive iconsize1515" (click)="submitUserFavList(contentCreator.content_creator_user_id)">
-            <img
-              src="../../assets/image/svg/2wishlistactiveproduct.svg"
-              alt="wishlist-icon"
-            />
+          <div *ngIf="contentCreator?.isfavourite?.items == 0">
+            <div class="wishlisticonactive iconsize1515" (click)="submitUserFavList(contentCreator.content_creator_user_id)">
+              <img
+                src="../../assets/image/svg/2wishlistactiveproduct.svg"
+                alt="wishlist-icon"
+              />
+            </div>
+          </div>
+
+          <div *ngIf="contentCreator?.isfavourite?.items != 0">
+            <div class="wishlisticonactive iconsize1515" (click)="submitDeleteUserFavList(contentCreator.isfavourite.items[0].id)">
+              <img
+                src="../../assets/image/svg/wishlistactiveproduct.svg"
+                alt="wishlist-icon"
+              />
+            </div>
           </div>
 
           <div class="img">
