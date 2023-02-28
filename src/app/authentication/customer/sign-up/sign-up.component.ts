@@ -203,7 +203,7 @@ export class CustomerSignupComponent implements OnInit {
             .CreateVuugleUsers(vuugleUser)
             .then(() => {
                 console.log('User registered successfully.');
-                this.router.navigate(['/login']);
+                this.router.navigate(['/authentication/sign-in']);
             })
             .catch((e) => {
                 console.log('error creating Country...', e);
