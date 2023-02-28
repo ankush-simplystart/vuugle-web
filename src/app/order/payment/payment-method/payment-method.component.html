@@ -1,0 +1,92 @@
+<div class="wrapbox">
+  <div class="backwithshare pt-16 grdbtn">
+    <div class="innerbox">
+      <div class="backbtn">
+        <a (click)="closePaymentMethodSheet()"><img src="../../assets/image/svg/whiteback.svg" /></a>
+      </div>
+
+      <div class="pagetitle">Payment Method</div>
+
+      <div></div>
+    </div>
+  </div>
+  <section>
+    <div class="container pt-20 pb-20">
+      <div class="fontsize16 black">Pay with</div>
+      <div class="fontsize1218400 greylight">
+        Select one of the payment methods
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="fontsize1218400 grey2">Default Payment Method</div>
+    </div>
+    <div class="payment-container threedottsicon mt-6 mb-20">
+      <div class="card-image">
+        <img src="../../assets/image/img/visa-debit-card.png" alt="visa" />
+      </div>
+      <div class="card-details">
+        <h4>
+          Visa <span>XXXX XXXX XXXX 9865</span
+          ><span class="edit-icon"
+            ><img src="../../assets/image/svg/threedotts.svg" alt="edit"
+          /></span>
+        </h4>
+        <p><strong>Expiry</strong> Aug 2025</p>
+      </div>
+    </div>
+
+    <div class="payment-container threedottsicon mb-3">
+      <div class="card-image">
+        <img src="../../assets/image/svg/pay_with_paypal.svg" alt="visa" />
+      </div>
+      <div class="card-details">
+        <h4>
+          Pay with Paypal<span class="edit-icon"
+            ><img src="../../assets/image/svg/threedotts.svg" alt="edit"
+          /></span>
+        </h4>
+        <p>Use your card linked to Paypal</p>
+      </div>
+    </div>
+
+    <div class="payment-container threedottsicon mb-3">
+      <div class="card-image">
+        <img src="../../assets/image/svg/apple_pay.svg" alt="visa" />
+      </div>
+      <div class="card-details">
+        <h4>
+          Apple Pay<span class="edit-icon"
+            ><img src="../../assets/image/svg/threedotts.svg" alt="edit"
+          /></span>
+        </h4>
+        <p>Use your card linked to Apple Pay</p>
+      </div>
+    </div>
+
+    <div class="payment-container threedottsicon mb-3">
+      <div class="card-image">
+        <img src="../../assets/image/svg/google_pay.svg" alt="visa" />
+      </div>
+      <div class="card-details">
+        <h4>
+          Google Pay<span class="edit-icon"
+            ><img src="../../assets/image/svg/threedotts.svg" alt="edit"
+          /></span>
+        </h4>
+        <p>Use your account linked to google pay</p>
+      </div>
+    </div>
+    <hr />
+    <div class="payment-container threedottsicon">
+      <div class="card-image" (click)="openAddCardSheet()">
+        <img src="../../assets/image/svg/card.svg" alt="visa" />
+      </div>
+      <div class="card-details">
+        <h4>Other Debit/Credit Card</h4>
+        <p>Add debit or credit card</p>
+      </div>
+    </div>
+  </section>
+</div>

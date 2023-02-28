@@ -1,0 +1,47 @@
+<div class="wrapbox">
+  <div class="backwithshare grdbtn mb-14">
+     <div class="innerbox">
+     <div class="backbtn"> <a (click)="closeMyAddressSheet"><img src="../../assets/image/svg/whiteback.svg" /></a> </div>
+     <div class="pagetitle">Select Address</div>
+     <div></div>
+     </div>
+  </div>
+  <section class="Addresssection scrollingheight">
+     <div class="container">
+        <div class="addresssectionlist mb-20 bg-white radius-10">
+           <div class="Addressshow">
+              <input type="radio" checked/>
+              <h4
+                 class="d-flex justify-content-between align-items-center mb-10"
+                 >
+                 Sam William
+                 <span (click)="openAddAddressSheet()"><img src="../../../assets/image/svg/edit-icons.svg" alt="edit" /></span>
+              </h4>
+              <p class="addline">140 London Street, London, SW1 434, UK</p>
+           </div>
+        </div>
+        <div class="addresssectionlist bg-white radius-10">
+           <div class="Addressshow">
+              <input type="radio" />
+              <h4
+                 class="d-flex justify-content-between align-items-center mb-10"
+                 >
+                 Sam William
+                 <span (click)="openAddAddressSheet()"><img src="../../../assets/image/svg/edit-icons.svg" alt="edit" /></span>
+              </h4>
+              <p class="addline">140 London Street, London, SW1 434, UK</p>
+           </div>
+        </div>
+     </div>
+     <div class="container mt-20 mb-20">
+        <p class="color3 fontsizemd d-flex justify-content-center">
+           <a (click)="openAddAddressSheet()">+ Add New Address</a>
+        </p>
+     </div>
+  </section>
+  <section class="mt-10 mb-10">
+     <div class="container">
+        <button class="grdbtn buttn w-100" (click)="closeMyAddressSheet">Continue</button>
+     </div>
+  </section>
+</div>

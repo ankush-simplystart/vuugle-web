@@ -1,0 +1,76 @@
+<div class="already_a_customer">
+  <img src="../../assets/image/svg/backwall.svg" alt="backwall" class="backwall" />
+  <img src="../../assets/image/svg/tv.svg" alt="tvimage" class="tvimage" />
+  <img src="../../assets/image/svg/tvtomobile.svg" alt="tvtomobile" class="tvtomobile" />
+</div>
+<div class="wrapbox">
+  <div class="brandbox2">
+      <div class="imagelogo2">
+          <img src="../../assets/image/svg/brandnamexxl.svg" alt="" />
+          <h2 class="fontsize24 textwhite">See it. Love it. Buy it!</h2>
+      </div>
+  </div>
+  <div class="container mt-60">
+      <div class="socialboz">
+          <div class="socialiconbox">
+              <a href="javascript:void()" (click)="googleSignIn()"><img src="../../assets/image/svg/google.svg" alt="" /></a>
+          </div>
+          <div class="socialiconbox">
+              <a href="javascript:void()" (click)="facebookSignIn()"><img src="../../assets/image/svg/facebook.svg" alt="" /></a>
+          </div>
+          <div class="socialiconbox">
+              <a href="javascript:void()"><img src="../../assets/image/svg/apple.svg" alt="" /></a>
+          </div>
+      </div>
+  </div>
+  <div class="container mt-27">
+      <a class="textwhite text-center block decoration-none">Or Login with Email</a>
+  </div>
+  <div class="container mt-30">
+      <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()" autocomplete="off">
+      <mat-form-field class="input-field" appearance="outline" floatLabel="always">
+          <mat-label class="textwhite">Email</mat-label>
+          <input
+            matInput
+            class="inputclass"
+            placeholder="samwilliam12@gmail.com"
+            formControlName ="email"
+            required
+            email
+          >
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email') && !loginForm.get('email')?.hasError('required')">
+              Invalid email id format
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+              Email is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+      <mat-form-field class="input-field mb-0" appearance="outline">
+          <mat-label class="textwhite">Password</mat-label>
+          <input
+            matInput
+            class="inputclass"
+            [type]="hide ? 'password' : 'text'"
+            placeholder="*********"
+            formControlName ="password"
+            required
+          >
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+              Password is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+      <div class="textwhite text-right mt-8 fontsizesm">
+          <a routerLink="/lost-password">Forgot Password?</a>
+      </div>
+      <mat-progress-bar *ngIf="isLoading" class="loading" mode="indeterminate"></mat-progress-bar>
+      <button
+        type="submit"
+        class="grdbtn button_xl w-100 mb-20 mt-30" [disabled]="!loginForm.valid">Login</button>
+        <p class="textwhite text-center">
+          Don’t have an account?
+          <a routerLink="/registration" class="decoration-none"><b class="textwhite">Sign Up</b></a>
+        </p>
+    </form>
+  </div>
+
+</div>

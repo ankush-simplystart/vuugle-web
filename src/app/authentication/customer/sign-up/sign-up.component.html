@@ -1,0 +1,142 @@
+<div class="wrapbox bg-white" *ngIf="!isConfirm">
+  <div class="backwithshare grdbtn mb-20 pt-27">
+     <div class="innerbox">
+        <div class="backbtn"> <a href="#"><img src="../../assets/image/svg/whiteback.svg" /></a> </div>
+        <div class="pagetitle"> <img src="../../assets/image/svg/whitebrand_name.svg" alt="" /> </div>
+        <div></div>
+     </div>
+
+  </div>
+  <div class="container mb-14">
+     <div class="avtaricon">
+       <div class="image-upload">
+           <label>
+               <img *ngIf="!cropped" class="round-img" src="{{profileImagePath}}"/>
+               <img class="round-img" *ngIf="cropped" [src]="cropped">
+           </label>
+           <input #_fileInput type="file" (change)="openCropperDialog($event)" accept="image/*" hidden>
+           <span (click)="_fileInput.click()">
+              <mat-icon class="icon">photo_camera</mat-icon>
+           </span>
+       </div>
+
+     </div>
+  </div>
+  <div class="text-danger">{{errorMessage}}</div>
+  <form [formGroup]="registerForm" (ngSubmit)="submitRegistrationForm()" autocomplete="off">
+     <section>
+        <div class="container">
+           <mat-form-field class="input-field" floatLabel="always">
+              <mat-label>Name</mat-label>
+              <input
+              matInput
+              class="inputclass"
+              placeholder="Your Name"
+              formControlName ="name"
+              >
+              <mat-error *ngIf="registerForm.get('name')?.hasError('required')">
+                 Name is <strong>required</strong>
+              </mat-error>
+           </mat-form-field>
+           <mat-form-field class="input-field" floatLabel="always">
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                class="inputclass"
+                placeholder="samwilliam12@gmail.com"
+                formControlName ="email"
+              >
+              <mat-error *ngIf="registerForm.get('email')?.hasError('email') && !registerForm.get('email')?.hasError('required')">
+                 Please Enter Valid Email Id.
+              </mat-error>
+              <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
+                  Email is <strong>required</strong>
+              </mat-error>
+           </mat-form-field>
+           <mat-form-field class="input-field" floatLabel="always">
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                [type]="'password'"
+                class="inputclass"
+                placeholder="Choose Password"
+                formControlName ="password"
+              >
+              <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
+                  Password is <strong>required</strong>
+              </mat-error>
+           </mat-form-field>
+           <mat-form-field class="input-field" floatLabel="always" *ngIf="!isAuthenticated">
+              <mat-label>Confirm Password</mat-label>
+              <input
+                matInput
+                [type]="'password'"
+                class="inputclass"
+                placeholder="Confirm Password"
+                formControlName ="confirm_password"
+              >
+              <mat-error *ngIf="registerForm.get('confirm_password')?.hasError('required')">
+                  Confirm Password is <strong>required</strong>
+              </mat-error>
+              <mat-error *ngIf="registerForm.get('confirm_password')?.hasError('confirmedValidator')">
+                 Password and Confirm password should be <strong>same</strong>
+              </mat-error>
+
+           </mat-form-field>
+           <mat-form-field class="input-field" floatLabel="always">
+              <mat-label>Gender</mat-label>
+              <mat-select formControlName="gender" id="gender" class="inputclass">
+                <mat-option value="" selected>Select Gender</mat-option>
+                <mat-option value="male">Male</mat-option>
+                <mat-option value="female">Female</mat-option>
+              </mat-select>
+            <mat-error *ngIf="registerForm.get('gender')?.hasError('required')">
+               Please select gender
+            </mat-error>
+           </mat-form-field>
+            <mat-form-field class="input-field" floatLabel="always">
+              <mat-label>Country</mat-label>
+              <input
+                matInput
+                class="inputclass"
+                placeholder="Country"
+                formControlName ="country"
+              >
+              <mat-error *ngIf="registerForm.get('country')?.hasError('required')">
+                  Country is <strong>required</strong>
+              </mat-error>
+           </mat-form-field>
+           <mat-checkbox *ngIf="!isAuthenticated"
+              class="termspolicy"
+              formControlName="acknowlegment">
+              By continuing, I agree to the <a href="javascript:void();" class="color3 decoration-none"
+              ><strong>Terms of Use</strong></a
+              > & <a href="javascript:void();" class="color3 decoration-none"
+              ><strong>Privacy Policy.</strong></a>
+           </mat-checkbox>
+        </div>
+     </section>
+     <section class="mt-40 mb-10" *ngIf="!isAuthenticated">
+        <div class="container">
+           <mat-progress-bar *ngIf="showProgressBar" class="loading" mode="indeterminate"></mat-progress-bar>
+           <button type="submit" class="grdbtn buttn w-100">Register Now</button>
+        </div>
+        <div class="termspolicy text-center mt-20 pl-0 mb-113">
+           <p class="label"> Already have an account? <a routerLink="/login" class="color3 decoration-none"
+              ><strong>Login</strong></a
+              > </p>
+        </div>
+     </section>
+   <section class="mt-40 mb-10" *ngIf="isAuthenticated">
+       <div class="container">
+           <mat-progress-bar *ngIf="showProgressBar" class="loading" mode="indeterminate"></mat-progress-bar>
+           <button type="submit" [disabled]="!registerForm.valid" class="grdbtn buttn w-100">Update</button>
+       </div>
+   </section>
+  </form>
+</div>
+
+<!-- OTP Verification Section Start -->
+<div class="wrapbox" *ngIf="isConfirm">
+  <app-otp-verification (resetPasswordCode)="confirmSignUp($event)" [maskEmail]="maskEmail" [userEmail]="user.email" [errorMessage]="errorMessage"></app-otp-verification>
+</div>

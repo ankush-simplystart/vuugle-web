@@ -1,0 +1,30 @@
+<div class="wrapbox">
+  <div class="container text-center mt-148">
+    <img src="../../../assets/image/svg/emailverification.svg" alt="" />
+  </div>
+
+  <div class="container mt-52">
+    <div class="contentblock text-center mb-30">
+      <h2 class="text-center lgheading mb-5">Email Verification</h2>
+      <p class="fontsizemd grey2">
+        Great!! We just sent you one-time password (OTP)on
+        {{maskEmail}} to verify your email.
+      </p>
+    </div>
+
+    <div class="enter_otp mb-0">
+      <label for="Name" class="fontsize16 text-center block mb-10"
+        >Enter OTP
+      </label>
+      <div class="otpbox">
+        <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6,inputClass:'otpinput',allowNumbersOnly: true,disableAutoFocus: false}"></ng-otp-input>
+      </div>
+    </div>
+
+    <button (click)="validateOtp()" class="grdbtn button_xl w-100 mb-20 mt-30">Verify</button>
+
+    <p class="text-center grey2">Didn’t receive the OTP?
+       <a (click)="resendConfirmationCode()" class="grey2 decoration-none"><b>Resend</b></a>
+    </p>
+  </div>
+</div>

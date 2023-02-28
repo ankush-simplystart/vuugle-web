@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'vuugle.scss';
+@import 'star-rating.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-bottom-sheet-container {
+  min-width: 100vw !important;
+  padding: 0px !important;
+}
+
+.home-trending-bottomsheet,
+.seller-detail-bottomsheet,
+.add-card-bottomsheet,
+.add-address-bottomsheet, .mat-bottom-sheet-container {
+  min-height: 100vh;
+}

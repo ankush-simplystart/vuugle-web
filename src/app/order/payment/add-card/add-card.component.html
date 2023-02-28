@@ -1,0 +1,93 @@
+<div class="wrapbox bg-white">
+  <div class="backwithshare grd2 pt-27">
+    <div class="innerbox">
+      <div class="backbtn">
+        <a (click)="closeAddCardSheet()"><img src="../../assets/image/svg/whiteback.svg" /></a>
+      </div>
+      <div class="pagetitle">Add Card</div>
+      <div></div>
+    </div>
+  </div>
+  <section class="pb-20">
+    <section class="mt-20">
+      <div class="container">
+        <div class="input-field">
+          <label for="Card Number " class="">Card Number </label>
+          <div class="paycard">
+            <input
+              type="text"
+              id="Card Number "
+              placeholder="Add Card Number"
+              class="inputclass"
+            />
+            <img src="../../assets/image/svg/mastercard.svg" alt="" class="card" />
+          </div>
+        </div>
+
+        <div class="input-field">
+          <label for="Name on Card" class="">Name on Card </label>
+
+          <input
+            type="text"
+            id="Name on Card"
+            placeholder="Add Name"
+            class="inputclass"
+          />
+        </div>
+
+        <div class="d-flex gap20">
+          <div class="input-field w-full">
+            <label for="Expiration" class="">Expiration </label>
+            <input
+              type="text"
+              id="Expiration"
+              placeholder="MM/YYYY"
+              class="inputclass w-full"
+            />
+          </div>
+          <div class="input-field w-full">
+            <label for="CVV" class="">CVV </label>
+            <input
+              type="text"
+              id="CVV"
+              placeholder="***"
+              class="inputclass w-full"
+            />
+          </div>
+        </div>
+
+        <div class="input-field">
+          <label for="Billing Address" class="">Billing Address</label>
+          <input
+            type="text"
+            id="Billing Address"
+            placeholder="Add Address"
+            class="inputclass"
+          />
+        </div>
+
+        <div class="input-field d-flex align-items-center gap5">
+          <input type="checkbox" id="Same as shipping address" /><label
+            for="Same as shipping address"
+            class="mb-0"
+            >Same as shipping address.</label
+          >
+        </div>
+
+        <div class="input-field d-flex align-items-center gap5">
+          <input type="checkbox" id="Save this card to my account" /><label
+            for="Save this card to my account"
+            class="mb-0"
+            >Save this card to my account</label
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-40 mb-40">
+      <div class="container">
+        <button class="grdbtn buttn w-100" (click)="closeAddCardSheet()">Add Card</button>
+      </div>
+    </section>
+  </section>
+</div>

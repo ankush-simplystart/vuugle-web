@@ -1,0 +1,292 @@
+<div class="wrapbox">
+  <div class="backwithshare grdbtn pt-27">
+    <div class="innerbox">
+      <div class="usericon" id="sidebarbtn">
+        <a href="#" class="usericoninner">
+          <img src="../../assets/image/svg/user3.svg" />
+        </a>
+      </div>
+
+      <div class="pagetitle pos_center">
+        <img src="../../assets/image/svg/whitebrand_name.svg" alt="" />
+      </div>
+
+      <div class="rightsideoption">
+        <div class="cartbtn">
+          <img src="../../assets/image/svg/whitecart.svg" alt="" />
+          <span class="num">2</span>
+        </div>
+        <div class="notification">
+          <img src="../../assets/image/svg/whitenotfication.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container pt-20">
+      <h3 class="fontsize1616500 mb-16">Popular Creators</h3>
+      <div class="itemslist">
+
+        <div class="items" *ngFor="let contentCreator of contentCreatorsList">
+
+          <div class="wishlisticonactive iconsize1515" (click)="submitUserFavList(contentCreator.content_creator_user_id)">
+            <img
+              src="../../assets/image/svg/2wishlistactiveproduct.svg"
+              alt="wishlist-icon"
+            />
+          </div>
+
+          <div class="img">
+            <a href="authentication/content-creator-profile?contentCreatorID=">
+               <img src="../../assets/image/img/James.png" alt="" />
+            </a>
+          </div>
+
+          <div class="text d-flex justify-content-between plr-7 sizing">
+            <div class="outname d-flex gap4">
+              <div class="fontsize1216400">{{contentCreator.content_creator_vuugle_id}}</div>
+              <div class="countryicon">
+                <img src="../../assets/image/svg/asticon.svg" alt="" />
+              </div>
+            </div>
+            <div class="socicon">
+              <img src="../../assets/image/svg/tiktok_white.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container pt-20">
+      <h3 class="fontsize1616500 mb-16">Trending Genres</h3>
+
+      <ul class="genreslist">
+        <li>
+          <a><img src="../../assets/image/svg/Drama.svg" alt="" /> Drama</a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/image/svg/music.svg" alt="" /> Music</a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/image/svg/dance.svg" alt="" /> Dance</a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../../assets/image/svg/fashion.svg" alt="" /> Fashion</a
+          >
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/image/svg/comedy.svg" alt="" /> Comedy</a>
+        </li>
+        <li>
+          <a href="#"><img src="../../assets/image/svg/magic.svg" alt="" /> Magic</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container pt-20">
+      <h3 class="fontsize1616500 mb-16">Trending Videos</h3>
+      <div class="itemslist">
+        <div class="items"  routerLink="/main/video-detail">
+          <div class="iconsize1515 socalicon">
+            <img src="../../assets/image/svg/tiktok_black.svg" alt="wishlist-icon" />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Dance_Video.png" alt="" />
+          </div>
+
+          <div class="text text-left plr-7">
+            <div class="fontsize1016500">Dance Video</div>
+          </div>
+        </div>
+        <div class="items">
+          <div class="iconsize1515 socalicon">
+            <img src="../../assets/image/svg/tiktok_black.svg" alt="wishlist-icon" />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Bahamas_Scene.png" alt="" />
+          </div>
+
+          <div class="text text-left plr-7">
+            <div class="fontsize1016500">Bahamas Scene</div>
+          </div>
+        </div>
+        <div class="items">
+          <div class="iconsize1515 socalicon">
+            <img src="../../assets/image/svg/tiktok_black.svg" alt="wishlist-icon" />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Magic_Video.png" alt="" />
+          </div>
+
+          <div class="text text-left plr-7">
+            <div class="fontsize1016500">Magic Video</div>
+          </div>
+        </div>
+        <div class="items">
+          <div class="iconsize1515 socalicon">
+            <img src="../../assets/image/svg/tiktok_black.svg" alt="wishlist-icon" />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Noah.png" alt="" />
+          </div>
+
+          <div class="text text-left plr-7">
+            <div class="fontsize1016500">Noah</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container pt-20">
+      <h3 class="fontsize1616500 mb-16">Discover New Creators</h3>
+
+      <div class="itemslist">
+        <div class="items">
+          <div class="wishlisticonactive iconsize1515">
+            <img
+              src="../../assets/image/svg/2wishlistactiveproduct.svg"
+              alt="wishlist-icon"
+            />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/James.png" alt="" />
+          </div>
+
+          <div class="text d-flex justify-content-between plr-7 sizing">
+            <div class="outname d-flex gap4">
+              <div class="fontsize1216400">James</div>
+              <div class="countryicon">
+                <img src="../../assets/image/svg/asticon.svg" alt="" />
+              </div>
+            </div>
+            <div class="socicon">
+              <img src="../../assets/image/svg/tiktok_white.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <div class="wishlisticonactive iconsize1515">
+            <img
+              src="../../assets/image/svg/2wishlistactiveproduct.svg"
+              alt="wishlist-icon"
+            />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Halima.png" alt="" />
+          </div>
+          <div class="text d-flex justify-content-between plr-7 sizing">
+            <div class="outname d-flex gap4">
+              <div class="fontsize1216400">Halima</div>
+              <div class="countryicon">
+                <img src="../../assets/image/svg/asticon.svg" alt="" />
+              </div>
+            </div>
+            <div class="socicon">
+              <img src="../../assets/image/svg/tiktok_white.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <div class="wishlisticonactive iconsize1515">
+            <img
+              src="../../assets/image/svg/2wishlistactiveproduct.svg"
+              alt="wishlist-icon"
+            />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/John.png" alt="" />
+          </div>
+          <div class="text d-flex justify-content-between plr-7 sizing">
+            <div class="outname d-flex gap4">
+              <div class="fontsize1216400">John</div>
+              <div class="countryicon">
+                <img src="../../assets/image/svg/asticon.svg" alt="" />
+              </div>
+            </div>
+            <div class="socicon">
+              <img src="../../assets/image/svg/tiktok_white.svg" alt="" />
+            </div>
+          </div>
+
+        </div>
+        <div class="items">
+          <div class="wishlisticonactive iconsize1515">
+            <img
+              src="../../assets/image/svg/2wishlistactiveproduct.svg"
+              alt="wishlist-icon"
+            />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Halima.png" alt="" />
+          </div>
+
+          <div class="text d-flex justify-content-between plr-7 sizing">
+            <div class="outname d-flex gap4">
+              <div class="fontsize1216400">Halima</div>
+              <div class="countryicon">
+                <img src="../../assets/image/svg/asticon.svg" alt="" />
+              </div>
+            </div>
+            <div class="socicon">
+              <img src="../../assets/image/svg/tiktok_white.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <div class="wishlisticonactive iconsize1515">
+            <img
+              src="../../assets/image/svg/2wishlistactiveproduct.svg"
+              alt="wishlist-icon"
+            />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Halima.png" alt="" />
+          </div>
+
+          <div class="text d-flex justify-content-between plr-7 sizing">
+            <div class="outname d-flex gap4">
+              <div class="fontsize1216400">Halima</div>
+              <div class="countryicon">
+                <img src="../../assets/image/svg/asticon.svg" alt="" />
+              </div>
+            </div>
+            <div class="socicon">
+              <img src="../../assets/image/svg/tiktok_white.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <div class="wishlisticonactive iconsize1515">
+            <img
+              src="../../assets/image/svg/2wishlistactiveproduct.svg"
+              alt="wishlist-icon"
+            />
+          </div>
+          <div class="img">
+            <img src="../../assets/image/img/Halima.png" alt="" />
+          </div>
+          <div class="text d-flex justify-content-between plr-7 sizing">
+            <div class="outname d-flex gap4">
+              <div class="fontsize1216400">Halima</div>
+              <div class="countryicon">
+                <img src="../../assets/image/svg/asticon.svg" alt="" />
+              </div>
+            </div>
+            <div class="socicon">
+              <img src="../../assets/image/svg/tiktok_white.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-main-footer></app-main-footer>

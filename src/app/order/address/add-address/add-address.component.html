@@ -1,0 +1,81 @@
+<div class="wrapbox bg-white">
+  <div class="backwithshare grdbtn mb-14">
+    <div class="innerbox">
+      <div class="backbtn"> <a (click)="closeAddAddressSheet()"><img src="../../assets/image/svg/whiteback.svg" /></a> </div>
+      <div class="pagetitle">Add Address</div>
+      <div></div>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="input-field">
+        <label for="Name">Name <span>*</span></label>
+        <input
+                type="text"
+                id="Name"
+                placeholder="Your Name"
+                class="inputclass"
+                />
+      </div>
+      <div class="input-field">
+        <label for="Mobile Number">Mobile Number <span>*</span></label>
+        <input
+                type="text"
+                id="Mobile Number"
+                placeholder="Add Mobile Number"
+                class="inputclass"
+                />
+      </div>
+      <div class="input-field">
+        <label for="Address"
+                >Address (House no, Building, Street, Area) <span>*</span></label
+                >
+        <input
+                type="text"
+                id="Address"
+                placeholder="Add House no, Building, Street, Area"
+                class="inputclass"
+                />
+      </div>
+      <div class="input-field">
+        <label for="Pin Code">Pin Code <span>*</span></label>
+        <input
+                type="text"
+                id="Pin Code"
+                placeholder="Add Pin Code"
+                class="inputclass"
+                />
+      </div>
+      <div class="input-field">
+        <label for="Country">Country <span>*</span></label>
+        <input
+                type="text"
+                id="Country"
+                placeholder="Country"
+                class="inputclass"
+                />
+      </div>
+      <div class="input-field">
+        <label for="City">City <span>*</span></label>
+        <input
+                type="text"
+                id="City"
+                placeholder="Add City"
+                class="inputclass"
+                />
+      </div>
+      <div class="input-field">
+        <input type="checkbox" id="Make this my default address" />
+        <label for="Make this my default address"
+                >Make this my default address <span>*</span></label
+                >
+      </div>
+    </div>
+  </section>
+  <br />
+  <section class="mt-10 mb-10">
+    <div class="container">
+      <button class="grdbtn buttn w-100" (click)="closeAddAddressSheet()">Add Address</button>
+    </div>
+  </section>
+</div>
